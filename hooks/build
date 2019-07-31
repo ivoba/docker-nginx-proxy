@@ -1,0 +1,2 @@
+#!/bin/sh
+docker build --build-arg PROXY=$PROXY -t $IMAGE_NAME .
