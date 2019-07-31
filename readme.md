@@ -11,7 +11,7 @@ call f.e.
 
 ## Build
 
-
+we use automated builds from https://cloud.docker.com
 
 ## Resources
 - https://medium.com/@oliver.zampieri/self-signed-ssl-reverse-proxy-with-docker-dbfc78c05b41
