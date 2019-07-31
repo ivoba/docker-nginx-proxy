@@ -1,0 +1,14 @@
+version: '3'
+services:
+  proxy:
+    build:
+      context: .
+      args:
+        - PROXY=https://www.googleapis.com
+    container_name: naturtermine-googleapis-proxy
+    # environment:
+    #   - PROXY="https://www.googleapis.com"
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 8080:80
