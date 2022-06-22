@@ -12,7 +12,8 @@ call f.e.
 
 ## Build
 
-We use automated builds from https://cloud.docker.com
+    docker build . -t="ivoba/nginx-proxy-googleapis:2.0.0" --pull --no-cache --build-arg PROXY=https://www.googleapis.com
+    docker push ivoba/nginx-proxy-googleapis:2.0.0
 
 In hooks we transfer ENV vars to build ARG.  
 Set PROXY ENV var to set the proxy_pass value for nginx.
@@ -21,9 +22,3 @@ Set PROXY ENV var to set the proxy_pass value for nginx.
 - https://medium.com/@oliver.zampieri/self-signed-ssl-reverse-proxy-with-docker-dbfc78c05b41
 - remove all headers for privacy, we dont want google to know too much
   https://stackoverflow.com/questions/44536548/how-to-remove-client-headers-in-nginx-before-passing-request-to-upstream-server
-- https://docs.docker.com/docker-hub/builds/link-source/
-- ARGs in cloud.docker automated builds
-  https://github.com/docker/hub-feedback/issues/508
-
-## Todo
-- use http2 for proxy https://stackoverflow.com/questions/41637076/http2-with-node-js-behind-nginx-proxy
